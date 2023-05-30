@@ -1,1 +1,14 @@
-<p>game-page works!</p>
+<div class="container">
+    <app-game-panel [index]="1" (numbersChanged)="onNumbersChanged($event)"></app-game-panel>
+    <app-game-panel [index]="2" (numbersChanged)="onNumbersChanged($event)"></app-game-panel>
+    <app-game-panel [index]="3" (numbersChanged)="onNumbersChanged($event)"></app-game-panel>
+    <app-game-panel [index]="4" (numbersChanged)="onNumbersChanged($event)"></app-game-panel>
+</div>
+<div>
+    <h3 class="play" (click)="play()">PLAY</h3>
+</div>
+<div>
+    <div *ngFor="let i of resultKeys">
+        <span>{{ getValue(i) }}</span>
+    </div>
+</div>

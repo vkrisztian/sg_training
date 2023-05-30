@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '', component: UserlistPageComponent
   },
   {
-    path: 'game', component: GamePageComponent, canActivate: [LoginGuard]
+    path: 'game', component: GamePageComponent
   }
 ];
 

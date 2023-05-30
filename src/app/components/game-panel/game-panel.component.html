@@ -1,0 +1,10 @@
+<div class="container">
+    <app-game-board-header (onRandom)="onRandom()" (onDelete)="onDelete()"></app-game-board-header>
+    <app-game-board 
+        [index]="index"
+        [minValue]="minValue"
+        [maxValue]="maxValue"
+        [numbers]="numbers"
+        (numbersChanged)="onNumbersChange($event)"
+    ></app-game-board>
+</div>

@@ -1,0 +1,7 @@
+<table class="table">
+    <tr *ngFor="let i of heightArray; index as j">
+        <td (click)="onCellClick((j * height) + l + 1)" [class.selected]="isSelected((j * height) + l + 1)" class="cell" *ngFor="let k of widthArray; index as l">
+            {{  (j * height) + l + 1}}
+        </td>
+    </tr>
+</table>
