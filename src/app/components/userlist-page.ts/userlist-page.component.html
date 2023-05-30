@@ -1,0 +1,23 @@
+<div>
+  <input (keyup)="setUserName($event)" [value]="userName" type="text" placeholder="user name" />
+  <input (keyup)="setPassword($event)" type="password" placeholder="password" />
+</div>
+<div>
+  <table class="user_list">
+    <tr>
+      <th>User name:</th>
+      <th>User Id:</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>
+            <span (click)="selectUser(user)">{{ user.userName }}</span>
+        </td>
+        <td>
+            {{ user.userId }}
+        </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <button (click)="login()">Login</button>
+</div>
