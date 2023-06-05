@@ -13,7 +13,14 @@ export class GamePageComponent implements OnInit {
     return Array.from(this.resultMap.keys());
   }
 
-  constructor() { }
+  public getResultKeys() {
+    return Array.from(this.resultMap.keys());
+
+  }
+
+  constructor() {
+    this.resultKeys === this.getResultKeys()
+   }
 
   ngOnInit(): void {
   }
